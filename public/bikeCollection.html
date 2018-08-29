@@ -30,7 +30,7 @@
       </div>
     </nav>
 <!-- bike Make, bike model, price, year -->
-    <p>Welcome to Frederick Ruiz's Bike Collection.  Frederick is extremely proud of his bike collection and has spent countless hours and dollars maintaining this collection.</p>
+    <p>Welcome to Frederick Ruiz's Bike Collection.  Frederick is extremely proud of his bike collection and has spent countless hours and dollars maintaining this collection. Feel free to add any of his bikes to this list if we missed any!</p>
 
     <table class="table">
       <thead class="thead-light">
@@ -38,7 +38,7 @@
           <th scope="col">#</th>
           <th scope="col">Make</th>
           <th scope="col">Model</th>
-          <th scope="col">Year</th>
+          <th scope="col">Purchase Date</th>
           <th scope="col">Price</th>
         </tr>
       </thead>
@@ -47,39 +47,59 @@
           <th scope="row">1</th>
           <td>Specialized</td>
           <td>Allez</td>
-          <td>2018</td>
+          <td>06/06/2018</td>
           <td>$750</td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>Cannondale</td>
           <td>CAAD 10</td>
-          <td>2011</td>
+          <td>08/30/2011</td>
           <td>$2,150</td>
         </tr>
         <tr>
           <th scope="row">3</th>
           <td>Cervelo</td>
           <td>R3</td>
-          <td>2016</td>
+          <td>06/03/2016</td>
           <td>$5,000</td>
         </tr>
         <tr>
           <th scope="row">4</th>
           <td>Scott</td>
           <td>Plasma Premium</td>
-          <td>2015</td>
+          <td>10/28/2015</td>
           <td>$7,000</td>
         </tr>
         <tr>
           <th scope="row">5</th>
           <td>Trek</td>
           <td>Madone SLR 9</td>
-          <td>2019</td>
+          <td>01/01/2019</td>
           <td>$12,000</td>
         </tr>
       </tbody>
     </table>
+
+    <form>
+  <div class="form-group">
+    <label for="bikeMake">Make</label>
+    <input type="text" class="form-control" id="bikeMake" placeholder="Trek, Cannondale, Schwinn, etc">
+  </div>
+  <div class="form-group">
+    <label for="bikeModel">Model</label>
+    <input type="text" class="form-control" id="bikeModel" placeholder="Madone, Caad, Roadmaster, etc">
+  </div>
+  <div class="form-group">
+    <label for="bikePurchDate">Purchase Date</label>
+    <input type="date" class="form-control" id="bikePurchDate" placeholder="Enter purchase date">
+  </div>
+  <div class="form-group">
+    <label for="bikePrice">Price</label>
+    <input type="text" class="form-control" id="bikePrice" placeholder="MSRP">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
   </div>
 </body>
