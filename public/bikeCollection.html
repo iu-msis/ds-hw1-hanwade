@@ -8,6 +8,7 @@
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style></style>
+    <link rel="stylesheet" href="css/bikeCollection.css">
 
     <title>Data & Systems HW#1</title>
 </head>
@@ -83,22 +84,22 @@
 
     <form>
   <div class="form-group">
-    <label for="bikeMake">Make</label>
+    <label class="formInfo" for="bikeMake">Make</label>
     <input type="text" class="form-control" id="bikeMake" placeholder="Trek, Cannondale, Schwinn, etc">
   </div>
   <div class="form-group">
-    <label for="bikeModel">Model</label>
+    <label class="formInfo" for="bikeModel">Model</label>
     <input type="text" class="form-control" id="bikeModel" placeholder="Madone, Caad, Roadmaster, etc">
   </div>
   <div class="form-group">
-    <label for="bikePurchDate">Purchase Date</label>
+    <label class="formInfo" for="bikePurchDate">Purchase Date</label>
     <input type="date" class="form-control" id="bikePurchDate" placeholder="Enter purchase date">
   </div>
   <div class="form-group">
-    <label for="bikePrice">Price</label>
+    <label class="formInfo" for="bikePrice">Price</label>
     <input type="text" class="form-control" id="bikePrice" placeholder="MSRP">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
 </form>
 
   </div>

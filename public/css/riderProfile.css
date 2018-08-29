@@ -1,0 +1,27 @@
+body {
+font-family: "Batang", sans-serif;
+background-color: rgba(27,180,171,.72);
+}
+
+header {
+    background-color: rgb(15,46,61);
+    color: white;
+    font-size: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(15,46,61);
+}
+
+a:hover {
+    color: rgb(198,83,187);
+    text-decoration: none;
+}
+
+img {
+  border-radius: 20px;
+}
