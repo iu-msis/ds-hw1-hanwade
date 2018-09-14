@@ -33,7 +33,7 @@
 <!-- bike Make, bike model, price, year -->
     <p>Welcome to Frederick Ruiz's Bike Collection.  Frederick is extremely proud of his bike collection and has spent countless hours and dollars maintaining this collection. Feel free to add any of his bikes to this list if we missed any!</p>
 
-    <table class="table">
+    <table id="bikeCollectionTable" class="table">
       <thead class="thead-light">
         <tr>
           <th scope="col">#</th>
@@ -103,5 +103,10 @@
 </form>
 
   </div>
+  <script src='js/tablesort.min.js'></script>
+  <script>
+  /** tablesort plugin from http://tristen.ca/tablesort/demo/ **/
+    new Tablesort(document.getElementById('bikeCollectionTable'))
+  </script>
 </body>
 </html>
