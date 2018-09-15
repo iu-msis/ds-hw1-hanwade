@@ -7,13 +7,13 @@
 
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style></style>
     <link rel="stylesheet" href="css/riderProfile.css">
 
     <title>Data & Systems HW#1</title>
 </head>
 <body>
-  <div class="container-fluid">
+  <main id="riderProfileVue" class="container-fluid">
+  <p>{{3+5}}</p>
     <header>
         Frederick Ruiz's Bio
     </header>
@@ -32,17 +32,27 @@
     </nav>
 
     <p>Welcome to Frederick Ruiz's Rider Profile.  This page will give a breakdown basic information about Frederick!</p>
-
     <div class="col-xs-3">
       <img src="img/frederick.jpg" alt="FrederickRuizImg">
     </div>
-    <div>Name:  Frederick Ruiz</div>
-    <div>Country:  Spain</div>
-    <div>Birthdate:  8/7/1977</div>
-    <div>Age:  41</div>
-    <div>Email: <a href="Frederick.Ruiz@example.com">Frederick.Ruiz@example.com</a></div>
+    <h2>Name:</h2>
+    <div> {{ name }} </div>
+    <h2>Country</h2>
+    <div>{{ country }}</div>
+    <h2>Birthdate</h2>
+    <div>{{ pretty_birthdate }}</div>
+    <h2>Age</h2>
+    <div>{{ age }}</div>
+    <h2>Email</h2>
+    <div> {{ email }}</div>
+  <!--<a href="Frederick.Ruiz@example.com">Frederick.Ruiz@example.com</a> -->
 
+  </main>
+  <!-- Monemt.js via CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/riderProfile.app.js"></script>
 
-  </div>
 </body>
 </html>

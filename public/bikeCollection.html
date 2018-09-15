@@ -13,7 +13,7 @@
     <title>Data & Systems HW#1</title>
 </head>
 <body>
-  <div class="container-fluid">
+  <main id="bikeCollectionVue" class="container-fluid">
     <header>
         Frederick Ruiz's Bike Collection
     </header>
@@ -44,40 +44,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Specialized</td>
-          <td>Allez</td>
-          <td>06/06/2018</td>
-          <td>$750</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cannondale</td>
-          <td>CAAD 10</td>
-          <td>08/30/2011</td>
-          <td>$2,150</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cervelo</td>
-          <td>R3</td>
-          <td>06/03/2016</td>
-          <td>$5,000</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Scott</td>
-          <td>Plasma Premium</td>
-          <td>10/28/2015</td>
-          <td>$7,000</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Trek</td>
-          <td>Madone SLR 9</td>
-          <td>01/01/2019</td>
-          <td>$12,000</td>
+        <tr v-for="bike in collection">
+          <td>{{ bike.id }}</td>
+          <td>{{ bike.make }}</td>
+          <td>{{ bike.model }}</td>
+          <td>{{ bike.purchDate }}</td>
+          <td>{{ bike.price }}</td>
         </tr>
       </tbody>
     </table>
@@ -102,7 +74,9 @@
   <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-  </div>
+</main>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/bikeCollection.app.js"></script>
   <script src='js/tablesort.min.js'></script>
   <script>
   /** tablesort plugin from http://tristen.ca/tablesort/demo/ **/
