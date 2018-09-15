@@ -4,10 +4,12 @@ var riderProfileApp = new Vue({
     "name" : "Frederick Ruiz",
     "country" : "Spain",
     "birthdate" : "1977-08-07",
-    "age" : 41,
     "email" : "Frederick.Ruiz@example.com"
   },
   computed: {
+    current_age: function() {
+      return moment().diff(this.birthdate, 'years')
+    },
     pretty_birthdate: function() {
       return this.pretty_date(this.birthdate)
     }
