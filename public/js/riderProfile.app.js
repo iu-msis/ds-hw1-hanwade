@@ -8,15 +8,15 @@ var riderProfileApp = new Vue({
   },
   computed: {
     current_age: function() {
-      return moment().diff(this.birthdate, 'years')
+      return moment().diff(this.birthdate, 'years');
     },
     pretty_birthdate: function() {
-      return this.pretty_date(this.birthdate)
+      return this.pretty_date(this.birthdate);
     }
   },
   methods: {
     pretty_date: function (d) {
-      return moment(d).format('l')
+      return moment(d).format('l');
     }
   }
-})
+});
