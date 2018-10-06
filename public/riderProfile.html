@@ -14,9 +14,8 @@
 <body>
   <main id="riderProfileVue" class="container-fluid">
     <header>
-        Frederick Ruiz's Bio
+        {{ results.results[0].name.first + " " + results.results[0].name.last }}'s Bio
     </header>
-
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,22 +28,22 @@
         </div>
       </div>
     </nav>
-
-    <p>Welcome to Frederick Ruiz's Rider Profile.  This page will give a breakdown basic information about Frederick!</p>
+    <p>Welcome to {{ results.results[0].name.first }}'s Rider Profile.  This page will give a breakdown basic information about {{ results.results[0].name.first }}!</p>
     <div class="col-xs-3">
-      <img src="img/frederick.jpg" alt="FrederickRuizImg">
+      <img v-bind:src="results.results[0].picture.large" alt="RiderImg">
     </div>
     <h2>Name:</h2>
-    <div> {{ name }} </div>
-    <h2>Country</h2>
-    <div>{{ country }}</div>
+    <div> {{ results.results[0].name.first + " " + results.results[0].name.last  }} </div>
+    <h2>Address:</h2>
+    <div>{{ results.results[0].location.street }}</div>
+    <div>{{ results.results[0].location.city + ", " + results.results[0].location.state + " " + results.results[0].location.postcode }}</div>
     <h2>Birthdate</h2>
     <div>{{ pretty_birthdate }}</div>
     <h2>Age</h2>
     <div>{{ current_age }}</div>
     <h2>Email</h2>
-    <div> {{ email }}</div>
-  <!--<a href="Frederick.Ruiz@example.com">Frederick.Ruiz@example.com</a> -->
+    <div><a v-bind:href="results.results[0].email"> {{ results.results[0].email }} </a></div>
+    <input type="button" onclick="window.location.reload()" class="btn btn-primary" value="New Rider">
 
   </main>
   <!-- Monemt.js via CDN-->
