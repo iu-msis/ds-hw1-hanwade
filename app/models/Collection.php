@@ -4,7 +4,7 @@ class Collection{
   public $make_id;
   public $model_id;
 
-  public function __construct($data) {
+  public function __construct($row) {
     $this->id = $row['id'];
 
   }
