@@ -20,7 +20,9 @@ class Comment {
     $success = $statement->execute([
       $this->comment_id,
       $this->comment
-    ])
+    ]);
+
+    $this->comment_id = $db->lastInsertId();
   }
 
   public static function fetchAll() {
