@@ -1,11 +1,11 @@
 <?php
 
 class Comment {
-  public $comment_id;
+  public $id;
   public $comment;
 
   public function __construct($data) {
-    $this->comment_id = intval($data['comment_id']);
+    $this->id = intval($data['id']);
     $this->comment = $data['comment'];
   }
 
@@ -13,16 +13,16 @@ class Comment {
     // 1. Create new db connection
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'INSERT into Comment (comment_id, comment)
-            VALUES              (?         , ?      )';
+    $sql = 'INSERT into Comment (id, comment)
+            VALUES              (? , ?      )';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute([
-      $this->comment_id,
+      $this->id,
       $this->comment
     ]);
 
-    $this->comment_id = $db->lastInsertId();
+    $this->id = $db->lastInsertId();
   }
 
   public static function fetchAll() {
