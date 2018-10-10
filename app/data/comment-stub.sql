@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Comment;
 
 CREATE TABLE Comment (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  comment NOT NULL
+  comment VARCHAR(200)
 );
 
 INSERT INTO Comment(id, comment)
