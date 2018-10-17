@@ -49,10 +49,10 @@
       </tbody>
     </table>
 
-    <form>
+<form @submit.prevent="handleCommentForm">
   <div class="form-group">
-    <label class="formInfo" for="bikeMake">Comment</label>
-    <input type="text" class="form-control" id="bikeMake" placeholder="Enter your random comment here!">
+    <label class="formInfo" for="newComment">Comment</label>
+    <input type="text" class="form-control" id="newComment" placeholder="Enter your random comment here!" required>
   </div>
   <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
 </form>
