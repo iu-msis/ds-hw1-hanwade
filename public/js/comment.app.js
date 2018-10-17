@@ -46,7 +46,7 @@ var commentApp = new Vue({
     //populate commmentForm with default values
     this.commentForm = this.getEmptyCommentForm();
 
-    fetch('api/comment.php')
+    fetch('api/comment.php?id='+id)
     .then( response => response.json() )
     .then( json => {commentApp.comment = json} )
     .catch( err => {
