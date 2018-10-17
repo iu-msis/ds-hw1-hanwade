@@ -32,45 +32,27 @@
       </div>
     </nav>
 <!-- bike Make, bike model, price, year -->
-    <p>Welcome to Frederick Ruiz's Bike Collection.  Frederick is extremely proud of his bike collection and has spent countless hours and dollars maintaining this collection. Feel free to add any of his bikes to this list if we missed any!</p>
+    <p>This page is dedicated to random comments!</p>
 
-    <table id="bikeCollectionTable" class="table">
+    <table id="commentTable" class="table">
       <thead class="thead-light">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Make</th>
-          <th scope="col">Model</th>
-          <th scope="col">Purchase Date</th>
-          <th scope="col">Price</th>
+          <th scope="col">ID</th>
+          <th scope="col">Comment</th>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="bike in collection">
-          <td>{{ bike.id }}</td>
-          <td>{{ bike.make }}</td>
-          <td>{{ bike.model }}</td>
-          <td>{{ bike.purchDate }}</td>
-          <td>{{ bike.price }}</td>
-        </tr>
+      <tbody v-for="c in comment"
+      :key="c.id"
+      :id="'comment' + 'c.id'">
+          <td>{{ c.id }}</td>
+          <td>{{ c.comment }}</td>
       </tbody>
     </table>
 
     <form>
   <div class="form-group">
-    <label class="formInfo" for="bikeMake">Make</label>
-    <input type="text" class="form-control" id="bikeMake" placeholder="Trek, Cannondale, Schwinn, etc">
-  </div>
-  <div class="form-group">
-    <label class="formInfo" for="bikeModel">Model</label>
-    <input type="text" class="form-control" id="bikeModel" placeholder="Madone, Caad, Roadmaster, etc">
-  </div>
-  <div class="form-group">
-    <label class="formInfo" for="bikePurchDate">Purchase Date</label>
-    <input type="date" class="form-control" id="bikePurchDate" placeholder="Enter purchase date">
-  </div>
-  <div class="form-group">
-    <label class="formInfo" for="bikePrice">Price</label>
-    <input type="text" class="form-control" id="bikePrice" placeholder="MSRP">
+    <label class="formInfo" for="bikeMake">Comment</label>
+    <input type="text" class="form-control" id="bikeMake" placeholder="Enter your random comment here!">
   </div>
   <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -81,7 +63,7 @@
   <script src="js/tablesort.min.js"></script>
   <script>
   /** tablesort plugin from http://tristen.ca/tablesort/demo/ **/
-    new Tablesort(document.getElementById('bikeCollectionTable'))
+    new Tablesort(document.getElementById('commentTable'))
   </script>
 </body>
 </html>
