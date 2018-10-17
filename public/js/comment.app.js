@@ -17,7 +17,7 @@ var commentApp = new Vue({
         headers: {
           "Content-Type": "application/json; charset=utf-8",
         },
-        body: s, //body data type must match 'content-type' header
+        body: s //body data type must match 'content-type' header
       })
       .then( response => response.json() )
       .then( json => {this.comment.push(json)} ) //append results to table
@@ -31,7 +31,7 @@ var commentApp = new Vue({
     },
     getEmptyCommentForm() {
       return {
-        id: this.comment.id,
+        //id: this.comment.id,
         comment: null
       }
     },
